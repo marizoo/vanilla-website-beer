@@ -3,16 +3,17 @@
 
 // <!-- ===== ROOTS ===== -->
 :root{
---header-height: 3rem;
 
 // ----- Colors ------
 --color-brand: #dc143c;
 --color-brand-dark: #be1134;
+--color-brand1: #069c5480;
 --color-title: #393939;
 --color-text: #707070;
 --color-text-light: #A6A6A6;
 --color-body: #FBFEFD;
 --color-container: #FFFFFF;
+--color-white: #fff;
 
 // ----- Font Size and Typography -----
 --font-family: 'Poppins', sans-serif;
@@ -54,6 +55,8 @@
 // ----- Base -----
 *,::before,::after{
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 html{
     scroll-behavior: smooth;
@@ -67,32 +70,19 @@ body.dark-theme{
     --color-container: #27302C;
 }
 
-// ----- Icon Button Dark/Light-----
-.toggle-theme-icon{
-    position: absolute;
-    right: 1rem;
-    top: 1.8rem;
-    color: var(--text-color);
-    font-size: 1rem;
-    cursor: pointer;
-}
 
 //  ----- General -----
 
 body{
-    margin: var(--header-height) 0 0 0;
     font-family: var(--font-family);
     font-size: var(--fz-normal);
     background-color: var(--color-body);
     color: var(--color-text);
     line-height: 1.6;
-}
-h1,h2,h3,ul,p{
-    margin: 0;  
+    overflow-x: hidden;
 }
 
 ul{
-    padding: 0;
     list-style: none;
 }
 a{
@@ -104,13 +94,330 @@ img{
     height: auto;
 }
 
-/*========== CLASS CSS ==========*/
+/* ----------- MARGIN & PADDING ----------- */
+.GloMargin{
+    margin: 4rem 6rem;
+
+    @media screen and (max-width: 700px) {
+        margin: 4rem;
+    }
+
+    @media screen and (max-width: 550px) {
+        margin: 4rem 2rem;
+    }
+}
+
+.GloPadding{
+    padding: 4rem 6rem;
+
+    @media screen and (max-width: 700px) {
+        padding: 4rem;
+    }
+
+    @media screen and (max-width: 550px) {
+        padding: 4rem 2rem;
+    }
+}
+
+.GloPaddingSm{
+    padding: 2rem 6rem;
+
+    @media screen and (max-width: 700px) {
+        padding: 2rem;
+    }
+
+    @media screen and (max-width: 550px) {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* ----------- LAYOUT ----------- */
+
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* ------------ BUTTONS ----------- */
+.button{
+    display: inline-block;
+    background-color: var(--color-brand);
+    color: var(--color-white);
+    padding: .75rem 1rem;
+    border-radius: .5rem; 
+    transition: .3s;
+    font-weight: var(--fw-medium);
+    
+    &:hover{
+        background-color: var(--color-brand-dark);
+    }
+}
+
+
+
+// <!-- ===== HOME - EXAMPLE ===== -->
+.home-example{
+    &__container{
+        height: calc(100vh - var(--header-height));
+        align-content: center;
+    }
+    &__title{
+        font-size: var( --fz-largest);
+        color: var(--color-brand);
+        margin-bottom: var( --margin-1);
+    }
+    &__subtitle{
+        font-size: var(--fz-h1);
+        color: var(--color-title);
+        margin-bottom: var(--margin-4);
+    }
+    &__img{
+        width: 300px;
+        justify-self: center;
+    }
+}
+
+
+/*========== FOOTER -EXAMPLE  ==========*/
+.footer-example{
+    &__container{
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        row-gap: 2rem;
+    }
+    &__logo{
+        font-size: var(--fz-h3);
+        color: var(--color-brand);
+        font-weight: var(--fw-semi-bold);
+    }
+    &__description{
+        display: block;
+        font-size: var(--fz-small);
+        margin: .25rem 0 var(--margin-3);
+    }
+    &__social{
+        font-size: 1.5rem;
+        color: var(--color-title);
+        margin-right: var(--margin-2);
+    }
+    &__title{
+        font-size: var(--fz-h2);
+        color: var(--color-title);
+        margin-bottom: var(--margin-2);
+    }
+    &__link{
+        display: inline-block;
+        color: var(--color-text);
+        margin-bottom: var(--margin-1);
+
+        &:hover{
+            color: var(--color-brand);
+        }
+    }
+    &__copy{
+        text-align: center;
+        font-size: var(--fz-small);
+        color: var(--color-text-light);
+        margin-top: 3.5rem;
+    }
+}
+// EDIT BELOW =============================================================================
 
 
 // <!-- ===== HERO ===== -->
-// <!-- ===== ABOUT ===== -->
+.hero{
+    height: 50vh;
+    background: url('https://images.pexels.com/photos/159291/beer-machine-alcohol-brewery-159291.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+
+    &::before{
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.425), rgba(2, 2, 48, 0.706));
+        z-index: -1;
+    }
+
+    &__container{
+        align-content: center;
+    }
+
+    .nav{
+        max-width: 1024px;
+        cursor: pointer;
+
+
+        .icon__toggle{
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            color: var(--color-text-light);
+            font-size: 1.5rem;
+        }
+
+        .icon__toggle:hover{
+            color: var(--color-brand);
+        }
+
+
+        .nav__menu {
+            color: var(--color-white);
+            background: var(--color-text-light);
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            right: -100%;
+            // left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: var(--fz-h2);
+            transition: 0.5s;
+            z-index: 1;
+            
+
+           .nav__ul-li{
+               margin: 1.5rem 0;
+               transition: 0.3s;
+           }
+
+           .nav__ul-li:hover{
+               color: var(--color-brand);
+           }
+
+           .icon__close{
+               position: absolute;
+               top: 1rem;
+               right: 1rem;
+               font-size: 2rem;
+           }
+
+           .icon__close:hover{
+               color: var(--color-brand);
+           }
+
+           
+        }
+
+        // Show - Close Menu
+        .show-menu{
+            right: 0;
+        }
+        
+        
+    }
+
+    
+    
+
+
+    &__data{}
+
+    &__title {
+        font-size: var(--fz-largest);
+    color: var(--color-brand);
+    margin-bottom: var(--margin-1);
+    font-weight: var(--fw-semi-bold);
+}
+
+    &__subtitle{
+        font-size: var(--fz-h1);
+        color: var(--color-white);
+        margin-bottom: var(--margin-4);
+    }
+
+}
+
+
+
+
 // <!-- ===== HISTORY ===== -->
 // <!-- ===== OUR STORY ===== -->
 // <!-- ===== REVIEWS ===== -->
 // <!-- ===== VIDEO ===== -->
 // <!-- ===== FOOTER ===== -->
+// ===============================================================================
+
+/* ----------------- MEDIA QUERIES -------------------- */
+@media screen and (min-width: 576px){
+    .hero__contaier{
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .abt_a{
+        text-align: initial;
+    }
+
+    .abo{
+        width: 380px;
+        order: -1;
+    }
+
+    .cont{
+        &__container{
+            grid-template-columns: 1.75fr 1fr;
+            align-items: center;
+        }
+        &__button{
+            justify-self: center;
+        }
+    }
+}
+
+@media screen and (min-width: 768px){
+    body{
+        margin: 0;
+    }
+
+    .secn{
+        padding-top: 8rem;
+    }
+
+    .menu{
+        &__container{
+            grid-template-columns: repeat(3, 210px);
+            column-gap: 4rem;
+        }
+        &__content{
+            padding: 1.5rem;
+        }
+        &__img{
+            width: 130px;
+        }
+    }
+
+    .app__store{
+        margin: 0 var(--margin-1) 0 0;
+    }
+}
+
+@media screen and (min-width: 960px){
+    .mz-container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .home__img{
+        width: 500px;
+    }
+
+    .about__container, .app__container{
+        column-gap: 7rem;
+    }
+}
+
+/* For tall screens on mobiles y desktop*/
+@media screen and (min-height: 721px) {
+    .home__container {
+        height: 640px;
+    }
+}
