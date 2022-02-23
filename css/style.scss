@@ -606,8 +606,9 @@ img{
 // <!-- ===== FOOTER ===== -->
 .footer{
     width: 100vw;
-    height: 30vh;
     color: var(--color-text);
+
+    .footer__container{
 
     .footer__sitemap{
         margin: 1.5rem 0;
@@ -671,15 +672,18 @@ img{
             color: var(--color-brand);
         }
     }
-
-    .footer__address-copyright{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 2rem 0;
-        color: var(--color-text-light);
     }
+
+    
+}
+
+.footer__address-copyright{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    color: var(--color-text-light);
 }
 // ===============================================================================
 
@@ -723,7 +727,6 @@ img{
 
         .history__graphic-data{
         margin: 2.2rem 0 3.3rem 1.2rem;
-
         }
 
         .graphic__data-dot{
@@ -739,7 +742,6 @@ img{
 
         .graphic__data-title{
             font-size: 1.2rem;
-
         }
     }
 
@@ -749,7 +751,6 @@ img{
             max-width: 350px;
             margin: 0 auto;
             margin-bottom: 2rem;
-
         }
     }
 
@@ -762,7 +763,6 @@ img{
         }
     }
    
-
 }
 
 @media screen and (min-width: 576px){
@@ -771,26 +771,182 @@ img{
 
 @media screen and (min-width: 768px){
    
+    .hero{
+
+        .nav{
+
+            .nav__menu{
+
+                .nav__ul-li{
+                    margin: 3rem 0;
+                }
+            }
+        }
+
+
+    }
+
+    .about{
+    grid-template-columns: repeat(2, 1fr);
+
+    .about__status-container{
+        width: 100%;
+    }
+
+    .about__data-container{}
+
+    .about__data-desc{
+        margin-bottom: 3rem;
+    }
+
+    }
+
+    .history{
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-areas: 
+        "title title"
+        "graphic data";
+
+        .history__container-title{
+            grid-area: title;
+        }
+
+        .history__container-graphic{
+            grid-area: graphic;
+            margin-top: 2rem;
+        }
+
+        .history__graphic-line{
+            grid-area: data;
+        }
+
+        .history__desc-par{
+        margin: 1.5rem 0 2rem 1rem;
+
+        }
+    }
+
+    .gallery{
+        width: 100%;
+       
+    
+
+    .gallery__container-1{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-areas: 
+        "galTitle galTitle"
+        "pic1 pic2";
+
+
+        .gallery__title-container{
+            grid-area: galTitle;
+
+        }
+
+        .pic-1{
+            grid-area: pic1;
+        }
+
+
+        .pic-2{
+            grid-area: pic2;
+        }
+    }
+    
+
+    .gallery__container-2{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-areas: 
+        "pic4 pic3"
+        "pic4 pic5";
+
+        .pic-3{ grid-area: pic3; }
+        .pic-4{ grid-area: pic4; }
+        .pic-5{ grid-area: pic5; }
+    }
+
+    .pic-small img{
+        max-width: 90%;
+        height: 90%;
+        object-fit: cover;
+    }
+
+    .pic-big img{
+        max-width: 90%;
+        height: 95.5%;
+        object-fit: cover;
+    }
+
+    }
+
+    .reviews{
+
+        .reviews__container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: 
+            "review1 review2"
+            "review3 review3"
+            ;
+        }
+
+        .review-card{
+            width: 260px;
+        }
+
+        .review-card1{ grid-area: review1; }
+        .review-card2{ grid-area: review2; }
+        .review-card3{ grid-area: review3; }
+    }
+
+    .contact{
+        .contact__container{
+           
+        }
+
+        .contact__form{
+            width: 90%;
+            max-width: 700px;
+        }
+
+        .contact__input{
+            height: 2.7rem;
+            font-weight: 1.1rem;
+        }
+
+        .contact__textArea{
+            font-weight: 1.1rem;
+        }
+
+        }
+
+    .footer {
+       
+
+        .footer__container{
+            display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        
+        
+
+        .footer__links{
+            margin: 1.5rem auto;
+        }
+
+       
+        }
+}
 }
 
-@media screen and (min-width: 1040px){
-   
-}
+@media screen and (min-width: 1040px){};
 
-@media screen and (min-width: 1200px){}
+@media screen and (min-width: 1200px){};
 
 
 /* Alternative code, for larger screens */
-@media screen and (min-width: 1700px){
-    .hom{
-        max-width: 1400px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-/* For tall screens on mobiles y desktop*/
-@media screen and (min-height: 721px) {
-    .home__container {
-        height: 640px;
-    }
-}
+@media screen and (min-width: 1700px){};
