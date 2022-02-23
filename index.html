@@ -58,9 +58,10 @@
 
                     <!-- data -->
                     <div class="hero__data">
-                        <h1 class="hero__title">Bweery</h1>
-                        <h2 class="hero__subtitle">Home made beers</h2>
-                        <a href="#" class="button">View Menu</a>
+                        
+                        <p class="section__title-main hero__data-title">BWEERY</p>
+                        <p class="section__title-sub  hero__data-subtitle">Home made beers</p>
+                        <a href="#" class="button hero-button">View Menu</a>
                     </div>
                     <div class="icon__toggle" id="nav-toggle">
                         <i class="bx bx-menu"></i>
@@ -91,7 +92,9 @@
                     </div>
                 </div>
                 <div class="about__data-container">
-                    <h1 class="about__data-title">POUR PROUDLY</h1>
+                                            
+                    <p class="section__title-sub">About</p>
+                        <p class="section__title-main">POUR <br> PROUDLY</p>
                     <p class="about__data-desc">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Possimus quibusdam, laboriosam doloremque qui nobis
@@ -220,10 +223,87 @@
             </section>
 
             <!-- ===== VIDEO ===== -->
+
             <!-- ===== REVIEWS ===== -->
-            <!-- ===== CONTACTS ===== -->
+            <section id="#reviews" class="reviews GloPadding">
+                <div class="reviews__title">
+                    <p class="section__title-sub">Reviews</p>
+                    <p class="section__title-main">From Our Customers</p>
+                </div>
+                <div class="reviews__container">
+                    <div class="review-card">
+                        <img src="https://images.pexels.com/photos/4348798/pexels-photo-4348798.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Brandi" class="card__img">
+                        <p class="card__name">Brandi Carlile</p>
+                        <p class="card__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, icta expedita dolor illum rerum nisi.</p>
+                    </div>
+                    <div class="review-card">
+                        <img src="https://images.pexels.com/photos/4511649/pexels-photo-4511649.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="mee maw" class="card__img">
+                        <p class="card__name">Meemaw Nana</p>
+                        <p class="card__text">Lorem ipsum dolor, accusamus minus dolores id dicta expedita dolor illum rerum nisi.</p>
+                    </div>
+                    <div class="review-card">
+                        <img src="https://images.pexels.com/photos/937453/pexels-photo-937453.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Shandeep" class="card__img">
+                        <p class="card__name">Shandeep Singh</p>
+                        <p class="card__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, sed repudiandae vero, accusamus minus dolores id dicta expeum rerum nisi.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== CONTACT US ===== -->
+            <section id="contact" class="contact GloPadding">
+                <div class="contact__container">
+                    <div class="contact__container-title">
+                        <p class="section__title-sub">Contact</p>
+                    <p class="section__title-main">Hit us up!</p>
+                    </div>
+                    <form class="contact__form" onsubmit="event.preventDefault()">
+                    <input placeholder="Name" type="text" class="contact__input">
+                    <input placeholder="Email" type="password" class="contact__input">
+                    <textarea placeholder="Message" name="message" id="message"  class="contact__textArea"></textarea>
+                    <button class="contact__button" type="button">Send Mesage</button>
+                    </form>
+                </div>
+            </section>
         </main>
         <!-- ===== FOOTER ===== -->
+        <footer class="footer GloPadding">
+            <div class="footer__sitemap">
+                <p class="footer__sitemap-logo">
+                    Bweery
+                </p>
+                <p class="footer__sitemap-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, deleniti perferendis? Quae dolores non laudantium?</p>
+            </div>
+
+            <div class="footer__links">
+                <p class="footer__link-item">About</p>
+                <p class="footer__link-item">History</p>
+                <p class="footer__link-item">Gallery</p>
+                <p class="footer__link-item">Video</p>
+                <p class="footer__link-item">Reviews</p>
+                <p class="footer__link-item">Contact Us</p>
+            </div>
+
+            <div class="footer__address">
+                <div class="footer__address-add">
+                    <p>Kentucky Fried Chicken</p>
+                    <p>179 Dixie chicks Avenu.</p>
+                    <p>California, USA</p>
+                </div>
+                <div class="footer__address-contact">
+                    <p>+1 8457 234 765</p>
+                    <p>contact@bweery.com</p>
+                </div>
+                <div class="footer__address-socialLinks">
+                    <i class='bx bxl-instagram'></i>
+                    <i class='bx bxl-twitter'></i>
+                    <i class='bx bxl-pinterest'></i>
+                </div>
+                
+            </div>
+            <div class="footer__address-copyright">
+                Bweery inc | All Rights Reserved &copy; Marizoo
+            </div>
+        </footer>
 
         <!-- Scrollrevealjs.org -->
         <script src="https://unpkg.com/scrollreveal"></script>
