@@ -943,7 +943,49 @@ img{
 }
 }
 
-@media screen and (min-width: 1040px){};
+@media screen and (min-width: 1040px){
+
+    .about{
+
+        .about__status-container{
+            align-content: center;
+        width: 320px;
+
+        }
+
+        .about__status{
+            width: 150px;
+            height: 150px;
+        }
+
+        .about__status-numbers{
+        font-size: 2rem;
+        }
+
+        .about__status-title{
+            font-size: 1rem;
+            font-weight: var(--fw-medium);
+            letter-spacing: 3px;
+        }
+    }
+
+    .history{
+
+        .history__desc-par{
+            margin: 2rem 0 4.5rem 1rem;
+        }
+    }
+
+    .reviews{
+
+        .reviews__container{
+            display: flex;
+        }
+
+    }
+
+
+};
 
 @media screen and (min-width: 1200px){};
 
