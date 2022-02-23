@@ -13,6 +13,7 @@
 --color-brand1: #069c5480;
 --color-white: #fff;
 --color-text-light: #A6A6A6;
+--color-text-dark: #3b3b3b;
 // the colors below have a dark themed version
 --color-title: #393939;
 --color-text: #707070;
@@ -174,6 +175,36 @@ img{
     }
 }
 
+
+/*=============== SCROLL UP ===============*/
+.scrollup{
+    position: fixed;
+    right: 1rem;
+    /* bottom: 3rem; */
+    bottom: -30%;
+    background-color: var(--color-brand);
+    box-shadow: 0 4px 12px hsla(206, 4%, 20%, .1);
+    display: inline-flex;
+    padding: .35rem;
+    border-radius: .15rem;
+    font-size: 1.25rem;
+    color: var(--color-white);
+    z-index: var(--z-tooltip);
+    opacity: .6;
+    transition: .4s;
+}
+
+.scrollup:hover{
+    transform: translateY(-.25rem);
+    opacity: 1;
+}
+
+/* Show Scroll Up*/
+.show-scroll{
+    bottom: 5rem;
+}
+
+
 // EDIT BELOW =============================================================================
 
 
@@ -258,6 +289,19 @@ img{
                color: var(--color-brand);
            }
 
+           .change-theme {
+            position: absolute;
+            right: 1.5rem;
+            top: 7rem;
+            color: var(--text-color);
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.4s ease;
+            }
+
+            .change-theme:hover{
+                color: var(--color-brand);
+            }
            
         }
 
@@ -268,6 +312,10 @@ img{
         
         .hero-button{
             margin: 2rem 0;
+        }
+
+        #theme-button{
+            font-size: 1.2rem;
         }
     }
 
@@ -286,16 +334,13 @@ img{
 
 }
 
-
-
-
 // <!-- ===== ABOUT ===== -->
 .about{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     justify-items: center;
     background: rgba(202, 113, 29, 0.432);
-    background: linear-gradient(180deg, rgba(202, 113, 29, 0.671) 0%, rgba(148, 82, 21, 0.658) 0%, rgba(254,254,254,1) 84%); ;
+    background: linear-gradient(180deg, rgba(202, 113, 29, 0.514) 0%, rgba(148, 82, 21, 0.493) 0%, rgba(254,254,254,1) 84%); ;
     color: var(--color-title);
 
     .about__status-container{
@@ -369,6 +414,7 @@ img{
 
     .about__data-desc{
         margin: 2rem 0;
+        color: var(--color-text-dark);
     }
 }
 // <!-- ===== HISTORY ===== -->
@@ -408,6 +454,7 @@ img{
         position: absolute;
         left: -1.42rem;
         top: .5rem;
+        z-index: 7;
     }
 
     .graphic__data-subtitle{
@@ -436,12 +483,12 @@ img{
         margin-bottom: 2rem;
     }
 
+
     .pic-small, .pic-big{
         margin-bottom: 2rem;
     }
 }
 
-// <!-- ===== VIDEO ===== -->
 // <!-- ===== REVIEWS ===== -->
 .reviews{
 
@@ -510,12 +557,13 @@ img{
 
     .contact__input{
         border: none;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
         height: 2rem;
         width: 100%;
         padding-left: 1rem;
         background: rgba(128, 128, 128, 0.158);
         border-radius: 5px;
+        color: var(--color-text-light);
     }
 
     .contact__input:focus{
@@ -529,6 +577,8 @@ img{
         border-radius: 5px;
         padding-left: 1rem;
         padding-top: 1rem;
+        color: var(--color-text-light);
+
     }
 
     .contact__textArea:focus{
@@ -634,74 +684,110 @@ img{
 // ===============================================================================
 
 /* ----------------- MEDIA QUERIES -------------------- */
+// start from 320px
+
+@media screen and (min-width: 549px){
+    
+    .about{
+
+        .about__status-container{
+        width: 430px;
+        }
+
+        .about__status{
+            width: 150px;
+            height: 150px;   
+        }
+
+        .status-1::before{
+            height: 145%;    
+        }
+
+        .about__status-numbers{
+            font-size: 1.6rem;
+        }
+
+        .about__status-title{
+            font-size: .8rem;
+        }
+
+    }
+
+    .history{
+
+
+        .history__graphic-line{
+            width: 3px;
+            height: 500px;
+        }
+
+        .history__graphic-data{
+        margin: 2.2rem 0 3.3rem 1.2rem;
+
+        }
+
+        .graphic__data-dot{
+            width: 13px;
+            height: 13px;
+            left: -1.75rem;
+            top: .4rem;
+        }
+
+        .graphic__data-subtitle{
+            font-size: 1.2rem;
+        }
+
+        .graphic__data-title{
+            font-size: 1.2rem;
+
+        }
+    }
+
+    .gallery{
+
+        .pic-small, .pic-big{
+            max-width: 350px;
+            margin: 0 auto;
+            margin-bottom: 2rem;
+
+        }
+    }
+
+    .reviews{
+
+        .review-card{
+            max-width: 350px;
+            margin: 0 auto;
+            margin-bottom: 2rem;
+        }
+    }
+   
+
+}
+
 @media screen and (min-width: 576px){
-    .hero__contaier{
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-    }
-
-    .abt_a{
-        text-align: initial;
-    }
-
-    .abo{
-        width: 380px;
-        order: -1;
-    }
-
-    .cont{
-        &__container{
-            grid-template-columns: 1.75fr 1fr;
-            align-items: center;
-        }
-        &__button{
-            justify-self: center;
-        }
-    }
+    
 }
 
 @media screen and (min-width: 768px){
-    body{
-        margin: 0;
-    }
-
-    .secn{
-        padding-top: 8rem;
-    }
-
-    .menu{
-        &__container{
-            grid-template-columns: repeat(3, 210px);
-            column-gap: 4rem;
-        }
-        &__content{
-            padding: 1.5rem;
-        }
-        &__img{
-            width: 130px;
-        }
-    }
-
-    .app__store{
-        margin: 0 var(--margin-1) 0 0;
-    }
+   
 }
 
-@media screen and (min-width: 960px){
-    .mz-container{
+@media screen and (min-width: 1040px){
+   
+}
+
+@media screen and (min-width: 1200px){}
+
+
+/* Alternative code, for larger screens */
+@media screen and (min-width: 1700px){
+    .hom{
+        max-width: 1400px;
         margin-left: auto;
         margin-right: auto;
     }
-
-    .home__img{
-        width: 500px;
-    }
-
-    .about__container, .app__container{
-        column-gap: 7rem;
-    }
 }
-
 /* For tall screens on mobiles y desktop*/
 @media screen and (min-height: 721px) {
     .home__container {

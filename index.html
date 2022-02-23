@@ -13,12 +13,14 @@
         <!-- Main css -->
         <link rel="stylesheet" href="./css/style.css" />
     </head>
-    <body>
+    <body id="body-top">
+         
+
         <!-- ===== HERO - HOME ===== -->
         <section class="hero" id="hero">
             <div class="GloPadding hero__container">
                 <!-- nav -->
-                <div class="nav">
+                <div class="nav" id="nav">
                     <div class="nav__menu" id="nav-menu">
                         <div class="icon__close" id="nav-close">
                             <i class="bx bx-x"></i>
@@ -36,7 +38,7 @@
                                 >
                             </li>
                             <li class="nav__ul-li">
-                                <a href="#gallery" class="nav__li-link">gallery</a>
+                                <a href="#gallery" class="nav__li-link">Gallery</a>
                             </li>
                             <li class="nav__ul-li">
                                 <a href="#videos" class="nav__li-link"
@@ -52,6 +54,12 @@
                                 <a href="#contact" class="nav__li-link"
                                     >Contact</a
                                 >
+                            </li>
+                            <li>
+                                <i
+                                    class="bx bx-moon change-theme"
+                                    id="theme-button"
+                                ></i>
                             </li>
                         </ul>
                     </div>
@@ -187,45 +195,47 @@
                             of our story
                         </p>
                     </div>
-                    <div class="pic-small pic-1">
-                        <img
-                            src="https://images.pexels.com/photos/1552630/pexels-photo-1552630.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                            alt="pint of beer"
-                        />
+                    
+                        <div class="pic-small pic-1">
+                            <img
+                                src="https://images.pexels.com/photos/1552630/pexels-photo-1552630.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                                alt="pint of beer"
+                            />
+                        </div>
+                        <div class="pic-small pic-2">
+                            <img
+                                src="https://images.pexels.com/photos/1267696/pexels-photo-1267696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                                alt="friends and beers"
+                            />
+                        </div>
                     </div>
-                    <div class="pic-small pic-2">
-                        <img
-                            src="https://images.pexels.com/photos/1267696/pexels-photo-1267696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                            alt="friends and beers"
-                        />
-                    </div>
-                </div>
-                <div class="gallery__container-2"></div>  
-                    <div class="pic-small pic-3">
-                        <img
-                            src="https://images.pexels.com/photos/5532674/pexels-photo-5532674.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                            alt="beer cans"
-                        />
-                    </div>
-                    <div class="pic-small pic-4">
-                        <img
-                            src="https://images.pexels.com/photos/1089930/pexels-photo-1089930.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                            alt="cheers"
-                        />
-                    </div>
-                    <div class="pic-big pic-5">
-                        <img
-                            src="https://images.pexels.com/photos/5531894/pexels-photo-5531894.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                            alt="friends cheers"
-                        />
-                    </div>
+                    <div class="gallery__container-2"></div>  
+                        <div class="pic-small pic-3">
+                            <img
+                                src="https://images.pexels.com/photos/5532674/pexels-photo-5532674.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                                alt="beer cans"
+                            />
+                        </div>
+                        <div class="pic-small pic-4">
+                            <img
+                                src="https://images.pexels.com/photos/1089930/pexels-photo-1089930.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                                alt="cheers"
+                            />
+                        </div>
+                        <div class="pic-big pic-5">
+                            <img
+                                src="https://images.pexels.com/photos/5531894/pexels-photo-5531894.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                                alt="friends cheers"
+                            />
+                        </div>
+                    
                 </div>
             </section>
 
             <!-- ===== VIDEO ===== -->
 
             <!-- ===== REVIEWS ===== -->
-            <section id="#reviews" class="reviews GloPadding">
+            <section id="reviews" class="reviews GloPadding">
                 <div class="reviews__title">
                     <p class="section__title-sub">Reviews</p>
                     <p class="section__title-main">From Our Customers</p>
@@ -269,7 +279,8 @@
         <footer class="footer GloPadding">
             <div class="footer__sitemap">
                 <p class="footer__sitemap-logo">
-                    Bweery
+                    <a href="#body-top">Bweery</a>
+                    
                 </p>
                 <p class="footer__sitemap-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, deleniti perferendis? Quae dolores non laudantium?</p>
             </div>
@@ -304,6 +315,11 @@
                 Bweery inc | All Rights Reserved &copy; Marizoo
             </div>
         </footer>
+
+          <!--========== SCROLL UP ==========-->
+          <a href="#body-top" class="scrollup" id="scroll-up">
+            <i class="bx bx-up-arrow-alt"></i>
+        </a>
 
         <!-- Scrollrevealjs.org -->
         <script src="https://unpkg.com/scrollreveal"></script>
