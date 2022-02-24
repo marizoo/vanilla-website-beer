@@ -1,7 +1,7 @@
 const iconToggle = document.querySelector("#nav-toggle");
 const iconClose = document.querySelector("#nav-close");
 const navMenu = document.querySelector("#nav-menu");
-const navLinks = document.querySelectorAll(".nav__ul-li");
+const navLinks = document.querySelectorAll(".nav__link");
 const themeButton = document.getElementById("theme-button");
 
 // show Menu when "iconToggle" is clicked
@@ -60,6 +60,15 @@ themeButton.addEventListener("click", () => {
     localStorage.setItem("selected-icon", getCurrentIcon());
 });
 
+/*=============== CHANGE BACKGROUND HEADER ===============*/
+function scrollHeader() {
+    const header = document.getElementById("header");
+    // when the scroll is greater than 50vh, add the scroll-header class to the header tag
+    if (this.scrollY >= 50) header.classList.add("scroll-header");
+    else header.classList.remove("scroll-header");
+}
+window.addEventListener("scroll", scrollHeader);
+
 /*=============== SHOW SCROLL UP ===============*/
 function scrollUp() {
     const scrollUp = document.getElementById("scroll-up");
@@ -68,6 +77,30 @@ function scrollUp() {
     else scrollUp.classList.remove("show-scroll");
 }
 window.addEventListener("scroll", scrollUp);
+
+/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+const sections = document.querySelectorAll("section[id]");
+
+function scrollActive() {
+    const scrollY = window.pageYOffset;
+
+    sections.forEach((current) => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 58;
+        const sectionId = current.getAttribute("id");
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document
+                .querySelector(".nav__menu a[href*=" + sectionId + "]")
+                .classList.add("active-link");
+        } else {
+            document
+                .querySelector(".nav__menu a[href*=" + sectionId + "]")
+                .classList.remove("active-link");
+        }
+    });
+}
+window.addEventListener("scroll", scrollActive);
 
 /*==================== SCROLL REVEAL ANIMATION ====================*/
 const sr = ScrollReveal({

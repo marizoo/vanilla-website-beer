@@ -11,75 +11,81 @@
             rel="stylesheet"
         />
         <!-- Main css -->
-        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body id="body-top">
-         
+        
 
-        <!-- ===== HERO - HOME ===== -->
-        <section class="hero" id="hero">
-            <div class="GloPadding hero__container">
-                <!-- nav -->
-                <div class="nav" id="nav">
-                    <div class="nav__menu" id="nav-menu">
-                        <div class="icon__close" id="nav-close">
-                            <i class="bx bx-x"></i>
-                        </div>
-                        <ul class="nav__ul">
-                            <li class="nav__ul-li">
-                                <a href="#hero" class="nav__li-link">Home</a>
-                            </li>
-                            <li class="nav__ul-li">
-                                <a href="#about" class="nav__li-link">About</a>
-                            </li>
-                            <li class="nav__ul-li">
-                                <a href="#history" class="nav__li-link"
+        <!-- ===============  HEADER =============== -->
+        <header class="header" id="header">
+            <nav class="nav nav__container">
+
+                <a href="#" class="nav__logo">BWEERY</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#header" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#history" class="nav__link"
                                     >History</a
                                 >
-                            </li>
-                            <li class="nav__ul-li">
-                                <a href="#gallery" class="nav__li-link">Gallery</a>
-                            </li>
-                            <li class="nav__ul-li">
-                                <a href="#videos" class="nav__li-link"
-                                    >Videos</a
-                                >
-                            </li>
-                            <li class="nav__ul-li">
-                                <a href="#reviews" class="nav__li-link"
-                                    >Reviews</a
-                                >
-                            </li>
-                            <li class="nav__ul-li">
-                                <a href="#contact" class="nav__li-link"
-                                    >Contact</a
-                                >
-                            </li>
-                            <li>
-                                <i
-                                    class="bx bx-moon change-theme"
-                                    id="theme-button"
-                                ></i>
-                            </li>
-                        </ul>
-                    </div>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#gallery" class="nav__link">Gallery</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#reviews" class="nav__link"
+                            >Reviews</a
+                        >
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link"
+                            >Contact</a
+                        >
+                        </li>
+                       
+                        <li>
+                            <i
+                                class="bx bx-moon change-theme nav__link"
+                                id="theme-button"
+                            ></i>
+                        </li>
+                   
 
-                    <!-- data -->
-                    <div class="hero__data">
-                        
-                        <p class="section__title-main hero__data-title">BWEERY</p>
-                        <p class="section__title-sub  hero__data-subtitle">Home made beers</p>
-                        <a href="#" class="button hero-button">View Menu</a>
-                    </div>
-                    <div class="icon__toggle" id="nav-toggle">
+                        <div class="nav__close" id="nav-close">
+                            <i class="bx bx-x"></i>
+                        </div>
+                    </ul>
+                </div>
+                    <!-- toggle button -->
+                    <div class="nav__toggle" id="nav-toggle">
                         <i class="bx bx-menu"></i>
                     </div>
+                
+            </nav>
+        </header>
+        <div class="hero">
+            <div class="hero__container">
+                <div class="hero__data">                   
+                    <p class="section__title-main hero__data-title">BWEERY</p>
+                    <p class="section__title-sub  hero__data-subtitle">Home made beers</p>
+                    <a href="#" class="button hero-button">View Menu</a>
                 </div>
             </div>
-        </section>
+        </div>
+                    
+                    
+                
+            
+        
 
-        <main>
-            <!-- ===== ABOUT ===== -->
+       <main>
+             <!-- ===== ABOUT ===== -->
             <section id="about" class="about GloPadding">
                 <div class="about__status-container">
                     <div class="about__status status-1">
@@ -146,13 +152,13 @@
                                 Launched online <br />
                                 platform
                             </p>
-                        </div>
+                        </div> 
                         <!-- graphic data 3 -->
                         <div class="history__graphic-data">
                             <span class="graphic__data-dot"></span>
                             <p class="graphic__data-subtitle">2020</p>
                             <p class="graphic__data-title">Merged with Goto</p>
-                        </div>
+                        </div> 
                         <!-- graphic data 4 -->
                         <div class="history__graphic-data">
                             <span class="graphic__data-dot"></span>
@@ -183,7 +189,7 @@
                         nostrum quia? Quaerat, repellat earum?
                     </p>
                 </div>
-            </section>
+            </section>  
 
             <!-- ===== GALLERY ===== -->
             <section id="gallery" class="gallery GloPadding">
@@ -229,9 +235,9 @@
                         </div>
                     </div>   
                 </div>
-            </section>
+            </section> 
 
-            <!-- ===== VIDEO ===== -->
+            
 
             <!-- ===== REVIEWS ===== -->
             <section id="reviews" class="reviews GloPadding">
@@ -261,11 +267,15 @@
             <!-- ===== CONTACT US ===== -->
             <section id="contact" class="contact GloPadding">
                 <div class="contact__container">
-                    <div class="contact__container-title">
+                    <!-- <div class="contact__container-title">
                         <p class="section__title-sub">Contact</p>
                     <p class="section__title-main">Hit us up!</p>
-                    </div>
+                    </div> -->
                     <form class="contact__form" onsubmit="event.preventDefault()">
+                        <div class="contact__container-title">
+                            <p class="section__title-sub">Contact</p>
+                        <p class="section__title-main">Hit us up!</p>
+                        </div>
                     <input placeholder="Name" type="text" class="contact__input">
                     <input placeholder="Email" type="password" class="contact__input">
                     <textarea placeholder="Message" name="message" id="message"  class="contact__textArea"></textarea>
@@ -273,7 +283,7 @@
                     </form>
                 </div>
             </section>
-        </main>
+        </main> 
         <!-- ===== FOOTER ===== -->
         <footer class="footer GloPadding">
 
@@ -331,7 +341,4 @@
     </body>
 </html>
 
-<!-- ! TO DO -->
-<!-- make base images (toggle-menu, and dark-light-theme) -->
-<!-- make base JS (toggle-menu, and dark-light-theme, animation! framer motion?) -->
-<!-- Make base readme -->
+
