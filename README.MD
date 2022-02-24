@@ -25,4 +25,4 @@
 
 
 ## IMAGE:
-![Screenshot of the App](./screenshots/css-12-laptop-800)
+![Screenshot of the App](./screenshots/css-12-laptop-800.jpg)
