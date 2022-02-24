@@ -10,6 +10,7 @@
 ## TECH STACKS:
 - HTML
 - CSS
+- JS
 - Library: 
     - Icons : boxicons.com
 
