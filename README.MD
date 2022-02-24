@@ -1,11 +1,11 @@
 
 ## DESCRIPTION:
 - A Mobile first responsive website with light-dark theme
-- [Youtube Video of the App](https://youtuuuuuuuuuuuuuuuuuuuuuuuu)
+- [Youtube Video of the App](https://youtu.be/ShJT8ZuY8EU)
 
 ## OUTCOME:
 - A Mobile first responsive website with light-dark theme
-- link to the App's video on youtube: https://youtuuuuuuuuuuuuuuuu
+- link to the App's video on youtube: https://youtu.be/ShJT8ZuY8EU
 
 ## TECH STACKS:
 - HTML
@@ -14,7 +14,8 @@
     - Icons : boxicons.com
 
 ## PROGRESS:
-- Done: 
+- Done: 100%
+- mobile responsive? YES!
 
 
 ## View other projects:
@@ -24,4 +25,4 @@
 
 
 ## IMAGE:
-![Screenshot of the App](./screenshots/500000000000000)
+![Screenshot of the App](./screenshots/css-12-laptop-800)

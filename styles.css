@@ -388,7 +388,7 @@ img{
 
 /* <!-- ===== HERO ===== --> */
     .hero{
-    height: 40vh;
+    height: 60vh;
     background: url('https://images.pexels.com/photos/159291/beer-machine-alcohol-brewery-159291.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
     background-repeat: no-repeat;
     background-size: cover;
@@ -415,16 +415,16 @@ img{
 
     .hero__data{
         margin-top: 5rem;
-        margin-left: 6rem;
+        margin-left: 3rem;
     }
 
     .hero__data-title{
-        font-size: 5rem;
+        font-size: 4rem;
         letter-spacing: .5rem;
     }
 
     .hero__data-subtitle{
-        font-size: 2rem;
+        font-size: 1.6rem;
         letter-spacing: .25rem;
     }
 
@@ -447,13 +447,13 @@ img{
         margin-bottom: 3rem;
         display: flex;
         flex-wrap: wrap;
-        width: 250px;
+        width: 260px;
         justify-content: center;
     }
 
     .about__status{
-        width: 100px;
-        height: 100px;
+        width: 130px;
+        height: 130px;
         line-height: 1.3;
         display: flex;
         flex-direction: column;
@@ -704,7 +704,13 @@ img{
     color: var(--color-text);
     }
 
-  
+  .footer__container{
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  }
 
     .footer__sitemap{
         margin: 1.5rem 0;
@@ -725,7 +731,7 @@ img{
     
 
     .footer__links{
-        margin: 1.5rem 0;
+        margin: 3rem 0;
         color: var(--color-text-light);
     }
 
@@ -757,6 +763,7 @@ img{
         color: var(--color-text-light);
         font-size: 1.5rem;
         cursor: pointer;
+        margin-top: 2rem;
         }
 
         .footer__address-socialLinks i{
@@ -800,19 +807,26 @@ img{
 
         .hero__data-title{
             font-size: 2.6rem;
+            letter-spacing: 1.25px;
         }
 
         .hero__data-subtitle{
             font-size: 1rem;
+            letter-spacing: 1.25px;
+
         }
 
-        .about{
-            padding: 2rem 6rem;
+        .about, .history, .gallery, .reviews, .contact{
+            padding: 2rem 2rem;
         }
      
         .footer__address-socialLinks{
             margin-top: 2rem;
             margin-left: 0;
+        }
+
+        .footer__address-copyright {
+            font-size: .8rem;
         }
 
     }
@@ -1088,6 +1102,14 @@ img{
                 font-weight: 1.1rem;
             }
     
+            .footer__sitemap {
+                grid-area: sitemap;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+              }
     
     
             .footer__sitemap-desc{
@@ -1111,7 +1133,7 @@ img{
             }
 
             .footer__address{
-                padding-top: 2rem;
+                padding-top: 0;
             }
     }
     
@@ -1161,8 +1183,26 @@ img{
                 margin-top: 5rem;
             }
 
-            .footer__address{
-                padding-top: 2rem;
+
+            .footer__sitemap {
+                grid-area: sitemap;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer__sitemap-logo {
+                margin-bottom: 1.2rem;
+            }
+
+            .footer__address {
+                padding-top: 0;
+            }
+
+            .footer__address-socialLinks {
+                margin-top: 0;
             }
     
 
